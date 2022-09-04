@@ -47,6 +47,7 @@ module.exports = async () => {
       locales: locales,
       defaultLocale: "en",
     },
+    output: "standalone",
     async rewrites() {
       return [
         {

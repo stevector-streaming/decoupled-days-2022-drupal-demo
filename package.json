@@ -13,8 +13,8 @@
   "author": "@pantheon-systems",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && cp -r .next/static .next/standalone/.next && cp -r public .next/standalone",
+    "start": "node .next/standalone/server.js",
     "lint": "next lint",
     "test": "vitest run --mode umami && vitest run --mode default",
     "test:umami": "vitest --mode umami",
